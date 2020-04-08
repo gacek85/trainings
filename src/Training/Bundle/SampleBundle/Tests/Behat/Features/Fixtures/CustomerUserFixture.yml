@@ -1,0 +1,18 @@
+include:
+    - '@OroCustomerBundle:BuyerCustomerFixture.yml'
+
+Oro\Bundle\CustomerBundle\Entity\CustomerUser:
+    existing:
+        email: 'de@example.org'
+        username: 'de@example.com'
+        password: 'gxP1L8r86hrdUMg9wKdfnsS/EZC4a7jOIdn6BMzegqL2S6e+KBIuHCrDVciMdiR/64osNnabmFonwK8l09vQxA=='
+        salt: 'fgswya1kzw0sck8ck48kosowckwo0ws'
+        firstName: 'Test'
+        lastName: 'User'
+        enabled: '1'
+        confirmed: '1'
+        customer: '@customer1'
+        organization: '@organization'
+        roles: ['@buyer']
+        owner: '@new_owner'
+        website: '@website1'
