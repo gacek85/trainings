@@ -1,0 +1,21 @@
+oro_behat_extension:
+    elements:
+        Register Button:
+            selector: 'a[href="/customer/user/registration"]'
+        Create An Account Button:
+            selector: 'input[value="Create An Account"]'
+        Login Form Wrapper:
+            class: Training\Bundle\SampleBundle\Tests\Behat\Elements\LoginForm
+            selector:
+                type: 'xpath'
+                locator: '//form[contains(@id, "oro_customer_frontend_customer_user_register")]'
+
+    suites:
+        TrainingSampleBundle:
+            contexts:
+                - Oro\Bundle\TestFrameworkBundle\Tests\Behat\Context\OroMainContext
+                - Oro\Bundle\FormBundle\Tests\Behat\Context\FormContext
+                - Oro\Bundle\TestFrameworkBundle\Tests\Behat\Context\FixturesContext
+                - Training\Bundle\SampleBundle\Tests\Behat\Context\CustomFeatureContext
+            paths:
+                - '@TrainingSampleBundle/Tests/Behat/Features'
